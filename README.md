@@ -4,6 +4,7 @@
 Este proyecto implementa un servidor de chat cliente-servidor en Java utilizando Sockets, Streams y Threads.
 El desarrollo se ha realizado de forma incremental en cuatro fases, partiendo de una comunicación básica hasta llegar a un servidor multicliente concurrente.
 
+
 **Tecnologías utilizadas**
 
 Java
@@ -15,6 +16,7 @@ Streams (DataInputStream, DataOutputStream)
 Threads (Runnable, Thread)
 
 IO y manejo de excepciones
+
 
 **Fases del desarrollo**
 **Fase 1 – Comunicación básica (One-Shot)**
@@ -31,6 +33,7 @@ La conexión se cierra inmediatamente.
 
 Esta fase sirve para entender el funcionamiento básico de los sockets y los flujos de datos, pero el servidor es bloqueante y solo atiende a un cliente a la vez.
 
+
 **Fase 2 – Comunicación continua**
 
 En esta fase se mejora la comunicación para que sea persistente.
@@ -43,6 +46,7 @@ La conversación solo termina cuando el cliente envía la palabra FIN.
 
 Aquí se introduce el concepto de protocolo de finalización y una comunicación más realista.
 
+
 **Fase 3 – Servidor multihilo**
 
 En esta fase se resuelve el problema de bloqueo del servidor.
@@ -54,6 +58,7 @@ Cada cliente es atendido en un hilo independiente.
 El servidor principal solo acepta conexiones y lanza hilos.
 
 Esto permite que el servidor atienda varios clientes al mismo tiempo sin bloquearse.
+
 
 **Fase 4 – Mejoras y robustez**
 
